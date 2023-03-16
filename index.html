@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label for="hora">Hora :</label>
+  <input maxlength="2" name="hora" type="text" class="hora" id="hora" required>
+    
+  <label for="minuto">:</label>
+  <input maxlength="2" name="minuto" type="text" class="minuto" id="minuto" required>
+  </div>  
+  
+  <script>
+    const inputNumber = document.getElementById('hora');
+    const nextInput = document.getElementById('minuto');
+    
+
+inputNumber.addEventListener('keyup', (event) => {
+  inputNumber.value = inputNumber.value.toUpperCase().replace(/[^0-9]/g, '');
+  if (inputNumber.value.length === 2) {
+    nextInput.focus();
+  }
+});
+
+  </script>
